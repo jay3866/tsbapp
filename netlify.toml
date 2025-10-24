@@ -1,6 +1,9 @@
 [build]
   publish = "."
   command = ""
+  
+[build.environment]
+  NODE_VERSION = ""
 
 [[headers]]
   for = "/index.html"
