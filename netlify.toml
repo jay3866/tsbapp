@@ -3,7 +3,6 @@
   publish = "."
   # No build command needed for static HTML
   command = "echo 'Static site - no build needed'"
-  ignore = "exit 0"
 
 # Force static site deployment - skip all processing
 [build.processing]
