@@ -2,15 +2,13 @@
   publish = "."
   command = ""
   
-# Force static site deployment
+# Force static site deployment - skip all processing
 [build.processing]
   skip_processing = true
-
-# Explicitly disable the Next.js plugin that's enabled in UI
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    disable = true
+  
+# Override any framework detection
+[build.environment]
+  NODE_VERSION = ""
 
 [[headers]]
   for = "/index.html"
