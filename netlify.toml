@@ -2,11 +2,16 @@
   # Pure static site - serve files from root directory
   publish = "."
   # No build command needed for static HTML
-  command = ""
+  command = "echo 'Static site - no build needed'"
+  ignore = "exit 0"
 
 # Force static site deployment - skip all processing
 [build.processing]
   skip_processing = true
+
+# Disable framework detection
+[build.environment]
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/index.html"
