@@ -4,6 +4,12 @@
   # No build command needed for static HTML
   command = "echo 'Static site - no build needed'"
 
+# Disable all plugins including Next.js auto-detection
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true
+
 # Force static site deployment - skip all processing
 [build.processing]
   skip_processing = true
@@ -11,6 +17,8 @@
 # Disable framework detection
 [build.environment]
   NODE_VERSION = "22"
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_USE_NPM = "false"
 
 [[headers]]
   for = "/index.html"
