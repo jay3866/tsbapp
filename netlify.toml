@@ -6,6 +6,12 @@
 [build.processing]
   skip_processing = true
 
+# Explicitly disable the Next.js plugin that's enabled in UI
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true
+
 [[headers]]
   for = "/index.html"
   [headers.values]
