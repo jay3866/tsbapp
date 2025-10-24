@@ -4,6 +4,10 @@
   # No build command needed
   command = ""
 
+[build.environment]
+  # Skip Next.js plugin completely
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
 [[headers]]
   for = "/index.html"
   [headers.values]
