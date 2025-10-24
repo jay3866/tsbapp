@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0f49bd;
+  --background-light: #f6f6f8;
+  --background-dark: #101622;
+  --text-light: #0d121b;
+  --text-dark: #f8f9fc;
+  --subtext-light: #4c669a;
+  --subtext-dark: #a0aec0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Spline-specific styles */
+.spline-shadow {
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+.spline-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.spline-no-interact {
+  pointer-events: none;
+}
+
+.spline-crop {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* CTA glow effect */
+.cta-glow {
+  box-shadow: 0 0 20px rgba(15, 73, 189, 0.3);
+}
+
+/* Soft card styles */
+.soft-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Beam background */
+.beam-bg {
+  background: linear-gradient(135deg, rgba(15, 73, 189, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+/* Section spacing */
+.section {
+  padding: 4rem 0;
+}
+
+/* Edge accent */
+.edge-accent {
+  border-left: 4px solid var(--primary);
+}
+
+/* Logo scroll animation */
+.logo-scroll-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 2rem;
+}
+
+.logo-scroll img {
+  height: 2rem;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease;
+}
+
+.logo-scroll img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Testimonial styles */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.testimonial-photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Step icon styles */
+.step-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
+  box-shadow: 0 0 30px var(--glow-color);
+}
+
+/* Button styles */
+.button-elevated {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.help-text {
+  color: var(--subtext-dark);
+}
+
+.form-message {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-message.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.form-message.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}

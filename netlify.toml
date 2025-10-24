@@ -1,14 +1,12 @@
 [build]
-  publish = "."
-  command = ""
-  
+  # This will be the folder that contains your static files
+  publish = "out" 
+  # This command will build your Next.js site as a static site
+  command = "npm run build" 
+
 # Force static site deployment - skip all processing
 [build.processing]
   skip_processing = true
-  
-# Override any framework detection
-[build.environment]
-  NODE_VERSION = ""
 
 [[headers]]
   for = "/index.html"
