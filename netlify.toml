@@ -2,8 +2,9 @@
   publish = "."
   command = ""
   
-[build.environment]
-  NODE_VERSION = ""
+# Force static site deployment
+[build.processing]
+  skip_processing = true
 
 [[headers]]
   for = "/index.html"
